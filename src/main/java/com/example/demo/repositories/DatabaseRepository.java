@@ -15,5 +15,10 @@ public class DatabaseRepository implements CardRepository {
     public int addCard(UUID id, Card card) {
         database.add(new Card(id, card.getHealth(), card.getLevel(), card.getName(), card.getAttack()));
         return 1;
+    }
+
+    @Override
+    public List<Card> allCards() {
+        return database;
     }  
 }

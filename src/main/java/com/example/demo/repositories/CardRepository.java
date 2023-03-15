@@ -2,6 +2,7 @@ package com.example.demo.repositories;
 
 import com.example.demo.models.Card;
 import java.util.UUID;
+import java.util.List;
 
 public interface CardRepository {
     int addCard(UUID id, Card card);
@@ -10,4 +11,6 @@ public interface CardRepository {
         UUID id = UUID.randomUUID();
         return addCard(id, card);
     }
+
+    List<Card> allCards();
 }

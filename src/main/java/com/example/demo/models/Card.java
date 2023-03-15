@@ -2,6 +2,8 @@ package com.example.demo.models;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Card {
     private UUID id;
     private Integer health;
@@ -9,7 +11,7 @@ public class Card {
     private String name;
     private String attack;
 
-    public Card(UUID id, Integer health, Integer level, String name, String attack) {
+    public Card(@JsonProperty("id") UUID id, @JsonProperty("health") Integer health, @JsonProperty("level") Integer level, @JsonProperty("name") String name, @JsonProperty("attack") String attack) {
         this.id = id;
         this.health = health;
         this.level = level;

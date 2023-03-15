@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import com.example.demo.repositories.CardRepository;
 import com.example.demo.models.Card;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,5 +19,9 @@ public class CardService {
 
     public int addCard(Card card) {
         return cardRepository.addCard(card);
+    }
+
+    public List<Card> getAllCards() {
+        return cardRepository.allCards();
     }
 }
